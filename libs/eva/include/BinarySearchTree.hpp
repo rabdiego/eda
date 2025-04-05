@@ -1,17 +1,17 @@
 #include <memory>
 #include "libs/eva/include/Collection.hpp"
-#include "libs/eva/include/RedBlackNode.hpp"
+#include "libs/eva/include/BinaryNode.hpp"
 
-#ifndef RedBlackTree_H
-#define RedBlackTree_H
+#ifndef BinarySearchTree_H
+#define BinarySearchTree_H
 
 namespace EVA {
     template <typename T>
-    class RedBlackTree : public Collection<T> {
+    class BinarySearchTree : public Collection<T> {
     private:
-        std::unique_ptr<RedBlackNode> root;
+        std::unique_ptr<BinaryNode<T>> root;
     public:
-        RedBlackTree();
+        BinarySearchTree();
         void insert(const T& value) override;
         bool remove(const T& value) override;
         bool contains(const T& value) const override;
